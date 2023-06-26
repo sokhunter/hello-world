@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+  r2dbc:
+    url: r2dbc:h2:mem:///exchangerate_db
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+client:
+  exchange-rate:
+    url: http://localhost:8080
